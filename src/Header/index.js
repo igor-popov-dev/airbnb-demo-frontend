@@ -25,7 +25,7 @@ const Input = styled.input`
   padding-left: 50px;
   font-size: 16px;
   line-height: 46px;
-  font-weight: 300;
+  font-weight: light;
   &:focus {
     outline: 0;
   }

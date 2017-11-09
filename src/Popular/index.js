@@ -33,7 +33,7 @@ const Name = styled.h3`
   font-size: 18px;
 `;
 const Check = styled.p`
-  font-weight: 300;
+  font-weight: light;
   font-size: 18px;
   line-height: 21px;
   opacity: 0.9;

@@ -21,7 +21,7 @@ const DropDown = styled.select`
   height: 100%;
   font-size: 12px;
   line-height: 6px;
-  font-weight: 300;
+  font-weight: light;
   &:focus {
     outline: 0;
   }

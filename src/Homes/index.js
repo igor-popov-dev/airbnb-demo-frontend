@@ -27,7 +27,7 @@ const Notice = styled.p`
   color: #383838;
   margin-top: 2px;
   margin-bottom: 8px;
-  font-weight: 300;
+  font-weight: light;
 `;
 const Col = Col4.extend`
   min-width: 197px;
