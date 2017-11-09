@@ -2,32 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import logo from "./airnbnLogo.svg";
 import search from "./search.svg";
-import affowDown from "./affowDown.svg";
+import arrowDown from "./arrowDown.svg";
 
 const Header = styled.header`border-bottom: 1px solid rgba(72, 72, 72, 0.3);`;
-const Link = styled.a`
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 24px;
-  color: #383838;
-`;
-const List = styled.ul`
-  color: blue;
-  padding-left: 0;
-  list-style: none;
-  font-size: 0
-  vertical-align: top;
-  text-align: right;
-`;
-const ListItem = styled.li`
-  display: inline-block;
-  padding: 0 8px;
-  margin-left: 8px;
-`;
 const Form = styled.form`
   position: relative;
   display: inline-block;
   margin-left: 10px;
+  margin-right: 8px;
   width: 100%;
 `;
 const Input = styled.input`
@@ -106,7 +88,7 @@ const LogoButton = styled.button`
   display: inline-block;
   border: none;
   padding-right: 17px;
-  background: url(${affowDown}) 100% 50% no-repeat;
+  background: url(${arrowDown}) 100% 50% no-repeat;
   cursor: pointer;
   &:focus {
     outline: 0;
@@ -114,6 +96,16 @@ const LogoButton = styled.button`
   @media (min-width: 1200px) {
     background: none;
   }
+`;
+const Navigation = styled.nav`text-align: right;`;
+const Link = styled.a`
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: #383838;
+  display: inline-block;
+  padding: 0 8px;
+  margin-left: 8px;
 `;
 
 export default function() {
@@ -131,22 +123,12 @@ export default function() {
             </Form>
           </LeftBlock>
           <RightBlock>
-            <nav>
-              <List>
-                <ListItem>
-                  <Link href="">Become a host</Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="">Help</Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="">Sign up</Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="">Log in</Link>
-                </ListItem>
-              </List>
-            </nav>
+            <Navigation>
+              <Link href="">Become a host</Link>
+              <Link href="">Help</Link>
+              <Link href="">Sign up</Link>
+              <Link href="">Log in</Link>
+            </Navigation>
           </RightBlock>
         </Row>
       </div>

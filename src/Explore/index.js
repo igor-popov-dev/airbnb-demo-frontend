@@ -1,45 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import pictureExample from "./pictureExample.png";
-import { Slider, SliderContainer } from "../Experiences/";
-
-export const Title = styled.h2`
-  font-size: 24px;
-  line-height: 1.4;
-  margin: 39px 0 16px;
-  font-weight: bold;
-  position: relative;
-  padding-left: 8px;
-  padding-right: 60px;
-  position: relative;
-  @media (min-width: 768px) {
-    font-size: 32px;
-    line-height: 34px;
-    margin: 48px 0 24px;
-  }
-`;
-
-export const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-`;
-export const Col4 = styled.div`
-  flex-basis: 50%;
-  max-width: 50%;
-  min-width: 50%;
-  padding-right: 8px;
-  padding-left: 8px;
-  box-sizing: border-box;
-  @media (min-width: 768px) {
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%;
-    min-width: 304px;
-  }
-  @media (min-width: 1200px) {
-    min-width: auto;
-  }
-`;
+import { Row, Title, Col4 } from "../CommonStyles.js";
+import { Slider, SliderContainer } from "../Slider/";
 
 const PartLink = styled.a`
   display: block;

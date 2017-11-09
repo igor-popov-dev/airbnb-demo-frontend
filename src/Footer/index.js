@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row } from "../Explore/";
+import { Row } from "../CommonStyles.js";
 import DropDownImage from "./dropDown.svg";
 import Bottom from "./Bottom.js";
 
@@ -81,7 +81,7 @@ const Link = styled.a`
   font-size: 15px;
   font-weight: normal;
   margin-bottom: 8px;
-  display: inline-block;
+  display: block;
 `;
 const Col2Offset1 = styled.div`
   display: none;
@@ -136,75 +136,35 @@ export default function() {
           </Col3>
           <Col2Offset1>
             <Title>Airbnb</Title>
-            <nav className="Footer__nav">
-              <NavList>
-                <li>
-                  <Link href="">About us</Link>
-                </li>
-                <li>
-                  <Link href="">Careers</Link>
-                </li>
-                <li>
-                  <Link href="">Press</Link>
-                </li>
-                <li>
-                  <Link href="">Policies</Link>
-                </li>
-                <li>
-                  <Link href="">Help</Link>
-                </li>
-                <li className="Footer__li">
-                  <Link href="">Diversity & Belongin</Link>
-                </li>
-              </NavList>
-            </nav>
+            <NavList>
+              <Link href="">About us</Link>
+              <Link href="">Careers</Link>
+              <Link href="">Press</Link>
+              <Link href="">Policies</Link>
+              <Link href="">Help</Link>
+              <Link href="">Diversity & Belongin</Link>
+            </NavList>
           </Col2Offset1>
           <Col2Offset1>
             <Title>Discover</Title>
-            <nav>
-              <NavList>
-                <li>
-                  <Link href="">Trust & Safety</Link>
-                </li>
-                <li>
-                  <Link href="">Travel Credit</Link>
-                </li>
-                <li>
-                  <Link href="">Gift Cards</Link>
-                </li>
-                <li>
-                  <Link href="">Airbnb Citizen</Link>
-                </li>
-                <li>
-                  <Link href="">Business Travel</Link>
-                </li>
-                <li>
-                  <Link href="">Guidebooks</Link>
-                </li>
-                <li>
-                  <Link href="">Airbnbmag</Link>
-                </li>
-              </NavList>
-            </nav>
+            <NavList>
+              <Link href="">Trust & Safety</Link>
+              <Link href="">Travel Credit</Link>
+              <Link href="">Gift Cards</Link>
+              <Link href="">Airbnb Citizen</Link>
+              <Link href="">Business Travel</Link>
+              <Link href="">Guidebooks</Link>
+              <Link href="">Airbnbmag</Link>
+            </NavList>
           </Col2Offset1>
           <Col2Offset1>
             <Title>Hosting</Title>
-            <nav className="Footer__nav">
-              <NavList>
-                <li>
-                  <Link href="">Why Host</Link>
-                </li>
-                <li>
-                  <Link href="">Hospitality</Link>
-                </li>
-                <li>
-                  <Link href="">Responsible Hosting</Link>
-                </li>
-                <li>
-                  <Link href="">Community Center</Link>
-                </li>
-              </NavList>
-            </nav>
+            <NavList>
+              <Link href="">Why Host</Link>
+              <Link href="">Hospitality</Link>
+              <Link href="">Responsible Hosting</Link>
+              <Link href="">Community Center</Link>
+            </NavList>
           </Col2Offset1>
         </Row>
       </div>

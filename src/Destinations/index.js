@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Title } from "../Explore/";
+import { Row, Title } from "../CommonStyles.js";
 import {
   Slider,
+  SliderContainer,
   SliderControllerRight,
-  SliderControllerLeft,
-  SliderContainer
-} from "../Experiences/";
+  SliderControllerLeft
+} from "../Slider/";
 import destinationExample from "./destinationImage.png";
 
-const Col2 = styled.div`
+const Col = styled.div`
   flex-basis: 33.3333%;
   max-width: 33.3333%;
   min-width: 33.3333%;
@@ -27,12 +27,12 @@ const Col2 = styled.div`
     min-width: 16.66666667%;
   }
 `;
-const CardItem = styled.a`
+const Card = styled.a`
   text-decoration: none;
   color: #383838;
   cursor: pointer;
 `;
-const Image = styled.div`
+const ImgContainer = styled.div`
   height: 138px;
   background: url(${destinationExample}) 50% 0 no-repeat;
   background-size: cover;
@@ -62,42 +62,42 @@ export default function() {
           <ArrowLeft />
           <Slider>
             <Row>
-              <Col2>
-                <CardItem>
-                  <Image />
+              <div className="col-lg-2 col-sm-3 col-xs-4">
+                <Card>
+                  <ImgContainer />
                   <City>Paris</City>
-                </CardItem>
-              </Col2>
-              <Col2>
-                <CardItem>
-                  <Image />
+                </Card>
+              </div>
+              <div className="col-lg-2 col-sm-3 col-xs-4">
+                <Card>
+                  <ImgContainer />
                   <City>Miami</City>
-                </CardItem>
-              </Col2>
-              <Col2>
-                <CardItem>
-                  <Image />
+                </Card>
+              </div>
+              <div className="col-lg-2 col-sm-3 col-xs-4">
+                <Card>
+                  <ImgContainer />
                   <City>Tokyo</City>
-                </CardItem>
-              </Col2>
-              <Col2>
-                <CardItem>
-                  <Image />
+                </Card>
+              </div>
+              <div className="col-lg-2 col-sm-3 col-xs-4">
+                <Card>
+                  <ImgContainer />
                   <City>Cape town</City>
-                </CardItem>
-              </Col2>
-              <Col2>
-                <CardItem>
-                  <Image />
+                </Card>
+              </div>
+              <div className="col-lg-2 col-sm-3 col-xs-4">
+                <Card>
+                  <ImgContainer />
                   <City>Seoul</City>
-                </CardItem>
-              </Col2>
-              <Col2>
-                <CardItem>
-                  <Image />
+                </Card>
+              </div>
+              <div className="col-lg-2 col-sm-3 col-xs-4">
+                <Card>
+                  <ImgContainer />
                   <City>Los Angeles</City>
-                </CardItem>
-              </Col2>
+                </Card>
+              </div>
             </Row>
           </Slider>
         </SliderContainer>

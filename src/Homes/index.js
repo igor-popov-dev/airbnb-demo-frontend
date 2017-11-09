@@ -1,20 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Title, Col4 } from "../Explore/";
-import star from "../Experiences/star.svg";
+import { Row, Col4, Card, Place, Price, ReviewsNum } from "../CommonStyles.js";
+import Stars from "../Stars/";
 import {
-  MoreLink,
   Slider,
+  SliderContainer,
   SliderControllerRight,
-  SliderControllerLeft,
-  Place,
-  Price,
-  StarsContainer,
-  StarItem,
-  ReviewsNum,
-  CardItem,
-  SliderContainer
-} from "../Experiences/";
+  SliderControllerLeft
+} from "../Slider/";
+import SectionTitle from "../SectionTitle/";
 import imageExample from "./imageExample.png";
 
 const Image = styled.div`
@@ -53,17 +47,14 @@ export default function() {
   return (
     <section>
       <div className="container">
-        <Title>
-          Homes
-          <MoreLink href="">See all</MoreLink>
-        </Title>
+        <SectionTitle name="Homes" moreLink="ya.ru" />
         <SliderContainer>
           <ArrowRight />
           <ArrowLeft />
           <Slider>
             <Row>
               <Col>
-                <CardItem>
+                <Card>
                   <Image />
                   <HomeInfo>
                     <Price>$82</Price>
@@ -71,19 +62,13 @@ export default function() {
                   </HomeInfo>
                   <Notice>Entrie house · 9 beds</Notice>
                   <ReviewsNum>
-                    <StarsContainer>
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                    </StarsContainer>
+                    <Stars />
                     97 · Superhost
                   </ReviewsNum>
-                </CardItem>
+                </Card>
               </Col>
               <Col>
-                <CardItem>
+                <Card>
                   <Image />
                   <HomeInfo>
                     <Price>$82</Price>
@@ -91,19 +76,13 @@ export default function() {
                   </HomeInfo>
                   <Notice>Entrie house · 4 beds</Notice>
                   <ReviewsNum>
-                    <StarsContainer>
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                    </StarsContainer>
+                    <Stars />
                     161 · Superhost
                   </ReviewsNum>
-                </CardItem>
+                </Card>
               </Col>
               <Col>
-                <CardItem>
+                <Card>
                   <Image />
                   <HomeInfo>
                     <Price>$200</Price>
@@ -111,16 +90,10 @@ export default function() {
                   </HomeInfo>
                   <Notice>Entrie house · 1 beds</Notice>
                   <ReviewsNum>
-                    <StarsContainer>
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                      <StarItem />
-                    </StarsContainer>
+                    <Stars />
                     364 · Superhost
                   </ReviewsNum>
-                </CardItem>
+                </Card>
               </Col>
             </Row>
           </Slider>

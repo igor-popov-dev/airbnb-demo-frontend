@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Title } from "../Explore/";
+import { Row } from "../CommonStyles.js";
+import { Col3 } from "../Experiences/";
 import {
-  Col3,
-  MoreLink,
-  Slider,
   SliderControllerRight,
   SliderControllerLeft,
+  Slider,
   SliderContainer
-} from "../Experiences/";
+} from "../Slider/";
+import SectionTitle from "../SectionTitle/";
 import imageExample from "./imageExample.png";
 
 const Image = styled.div`
@@ -46,10 +46,10 @@ export default function() {
   return (
     <section>
       <div className="container">
-        <Title>
-          Popular reservations around the world
-          <MoreLink href="">See all</MoreLink>
-        </Title>
+        <SectionTitle
+          name="Popular reservations around the world"
+          moreLink="ya.ru"
+        />
         <SliderContainer>
           <ArrowRight />
           <ArrowLeft />

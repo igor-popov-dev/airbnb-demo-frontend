@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row } from "../Explore/";
+import { Row } from "../CommonStyles.js";
 import footerLogo from "./footerLogo.svg";
 import facebook from "./facebook.svg";
 import twitter from "./twitter.svg";
@@ -18,27 +18,12 @@ const Col6 = styled.div`
   flex-basis: 50%;
   max-width: 50%;
 `;
-const List = styled.ul`
-  padding-left: 0;
-  list-style: none;
-  font-size: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 10px;
-  @media (min-width: 768px) {
-    justify-content: flex-end;
-    padding-top: 0;
-  }
-`;
-const ListItem = styled.li`
-  display: inline-block;
-  margin-left: 16px;
-`;
 const Link = styled.a`
   color: #636363;
   font-size: 15px;
   text-decoration: none;
+  margin-left: 16px;
+  display: inline-block;
 `;
 const Left = Col6.extend`
   display: flex;
@@ -65,7 +50,18 @@ const Right = Col6.extend`
     max-width: 50%;
   }
 `;
-const Navigation = styled.nav`width: 100%;`;
+const Navigation = styled.nav`
+  width: 100%;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+`;
 const Logo = styled.img`
   display: inline-block;
   margin-right: 12px;
@@ -75,6 +71,7 @@ const SocialLink = styled.a`
   width: 24px;
   height: 24px;
   display: inline-block;
+  margin-left: 16px;
 `;
 const FacebookLink = SocialLink.extend`
   background: url(${facebook}) 50% 50% no-repeat;
@@ -107,26 +104,12 @@ export default function() {
           </Left>
           <Right>
             <Navigation>
-              <List>
-                <ListItem>
-                  <Link href="">Terms</Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="">Privacy</Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="">Site map</Link>
-                </ListItem>
-                <ListItem>
-                  <FacebookLink href="">facebook</FacebookLink>
-                </ListItem>
-                <ListItem>
-                  <TwitterLink>twitter</TwitterLink>
-                </ListItem>
-                <ListItem>
-                  <InstagramLink>instagram</InstagramLink>
-                </ListItem>
-              </List>
+              <Link href="">Terms</Link>
+              <Link href="">Privacy</Link>
+              <Link href="">Site map</Link>
+              <FacebookLink href="">facebook</FacebookLink>
+              <TwitterLink>twitter</TwitterLink>
+              <InstagramLink>instagram</InstagramLink>
             </Navigation>
           </Right>
         </BottomRow>
