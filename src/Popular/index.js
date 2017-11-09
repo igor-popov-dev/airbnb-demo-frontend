@@ -1,7 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Title } from "../Explore/";
-import { Col3, MoreLink, Slider, SliderControllerRight } from "../Experiences/";
+import {
+  Col3,
+  MoreLink,
+  Slider,
+  SliderControllerRight,
+  SliderControllerLeft,
+  SliderContainer
+} from "../Experiences/";
 import imageExample from "./imageExample.png";
 
 const Image = styled.div`
@@ -33,6 +40,7 @@ const Check = styled.p`
   margin: 0;
 `;
 const ArrowRight = SliderControllerRight.extend`top: 82px;`;
+const ArrowLeft = SliderControllerLeft.extend`top: 82px;`;
 
 export default function() {
   return (
@@ -42,43 +50,46 @@ export default function() {
           Popular reservations around the world
           <MoreLink href="">See all</MoreLink>
         </Title>
-        <Slider>
+        <SliderContainer>
           <ArrowRight />
-          <Row>
-            <Col3>
-              <CardItem>
-                <Image />
-                <Theme>Speakeasy</Theme>
-                <Name>Chumley’s</Name>
-                <Check>About $60 per person</Check>
-              </CardItem>
-            </Col3>
-            <Col3>
-              <CardItem>
-                <Image />
-                <Theme>Korean gastropub</Theme>
-                <Name>Hanjan</Name>
-                <Check>About $50 per person</Check>
-              </CardItem>
-            </Col3>
-            <Col3>
-              <CardItem>
-                <Image />
-                <Theme>German american</Theme>
-                <Name>Prime Meats</Name>
-                <Check>About $55 per person</Check>
-              </CardItem>
-            </Col3>
-            <Col3>
-              <CardItem>
-                <Image />
-                <Theme>Fine seafood</Theme>
-                <Name>Seaprice</Name>
-                <Check>About $70 per person</Check>
-              </CardItem>
-            </Col3>
-          </Row>
-        </Slider>
+          <ArrowLeft />
+          <Slider>
+            <Row>
+              <Col3>
+                <CardItem>
+                  <Image />
+                  <Theme>Speakeasy</Theme>
+                  <Name>Chumley’s</Name>
+                  <Check>About $60 per person</Check>
+                </CardItem>
+              </Col3>
+              <Col3>
+                <CardItem>
+                  <Image />
+                  <Theme>Korean gastropub</Theme>
+                  <Name>Hanjan</Name>
+                  <Check>About $50 per person</Check>
+                </CardItem>
+              </Col3>
+              <Col3>
+                <CardItem>
+                  <Image />
+                  <Theme>German american</Theme>
+                  <Name>Prime Meats</Name>
+                  <Check>About $55 per person</Check>
+                </CardItem>
+              </Col3>
+              <Col3>
+                <CardItem>
+                  <Image />
+                  <Theme>Fine seafood</Theme>
+                  <Name>Seaprice</Name>
+                  <Check>About $70 per person</Check>
+                </CardItem>
+              </Col3>
+            </Row>
+          </Slider>
+        </SliderContainer>
       </div>
     </section>
   );

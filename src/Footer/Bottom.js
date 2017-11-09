@@ -7,8 +7,10 @@ import twitter from "./twitter.svg";
 import instagram from "./instagram.svg";
 
 const Bottom = styled.div`
-  margin-top: 48px;
   border-top: 1px solid #f0f0f0;
+  @media (min-width: 768px) {
+    margin-top: 48px;
+  }
 `;
 const Col6 = styled.div`
   padding-right: 8px;
@@ -22,7 +24,12 @@ const List = styled.ul`
   font-size: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-top: 10px;
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+    padding-top: 0;
+  }
 `;
 const ListItem = styled.li`
   display: inline-block;
@@ -36,14 +43,27 @@ const Link = styled.a`
 const Left = Col6.extend`
   display: flex;
   flex-direction: row;
-  height: 88px;
   align-items: center;
+  flex-basis: 100%;
+  max-width: 100%;
+  @media (min-width: 768px) {
+    height: 88px;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
 `;
 const Right = Col6.extend`
   display: flex;
   flex-direction: row;
   align-items: center;
-  text-align: right;
+  text-align: left;
+  flex-basis: 100%;
+  max-width: 100%;
+  @media (min-width: 768px) {
+    text-align: right;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
 `;
 const Navigation = styled.nav`width: 100%;`;
 const Logo = styled.img`
@@ -65,12 +85,22 @@ const TwitterLink = SocialLink.extend`
 const InstagramLink = SocialLink.extend`
   background: url(${instagram}) 50% 50% no-repeat;
 `;
+const BottomRow = Row.extend`
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+`;
 
 export default function() {
   return (
     <div className="container">
       <Bottom>
-        <Row>
+        <BottomRow>
           <Left>
             <Logo src={footerLogo} />
             <span>© Airbnb Inc.</span>
@@ -99,7 +129,7 @@ export default function() {
               </List>
             </Navigation>
           </Right>
-        </Row>
+        </BottomRow>
       </Bottom>
     </div>
   );

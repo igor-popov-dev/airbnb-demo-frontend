@@ -3,12 +3,13 @@ import styled from "styled-components";
 import { Row } from "../Explore/";
 import DropDownImage from "./dropDown.svg";
 import Bottom from "./Bottom.js";
-import { Col3 } from "../Experiences/";
 
 const Footer = styled.footer`
   box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
   margin-top: 64px;
-  padding-top: 48px;
+  @media (min-width: 768px) {
+    padding-top: 48px;
+  }
 `;
 const DropDown = styled.select`
   padding: 11px;
@@ -18,11 +19,31 @@ const DropDown = styled.select`
   display: block;
   width: 110%;
   height: 100%;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 6px;
   font-weight: 300;
   &:focus {
     outline: 0;
+  }
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
+`;
+export const Col3 = styled.div`
+  flex-basis: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 16px 0 24px;
+  @media (min-width: 768px) {
+    height: auto;
+    display: block;
+    flex-basis: 25%;
+    max-width: 25%;
+    padding: 0 8px;
   }
 `;
 const DropDownWrapper = styled.div`
@@ -31,14 +52,16 @@ const DropDownWrapper = styled.div`
   border: 1px solid rgba(72, 72, 72, 0.2);
   overflow: hidden;
   position: relative;
-  margin-bottom: 16px;
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 `;
 const Label = styled.label`
   background: #fff url(${DropDownImage}) 50% 50% no-repeat;
   width: 16px;
   height: 16px;
   position: absolute;
-  right: 16px;
+  right: 10px;
   top: 50%;
   margin-top: -8px;
 `;
@@ -61,11 +84,29 @@ const Link = styled.a`
   display: inline-block;
 `;
 const Col2Offset1 = styled.div`
+  display: none;
   margin-left: 8.33333333%;
   flex-basis: 16.66666667%;
   max-width: 16.66666667%;
   padding-right: 8px;
   padding-left: 8px;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+const DropDownCol = styled.div`
+  flex-basis: 50%;
+  max-width: 50%;
+  padding-right: 8px;
+  padding-left: 8px;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
 `;
 
 export default function() {
@@ -74,20 +115,24 @@ export default function() {
       <div className="container">
         <Row>
           <Col3>
-            <DropDownWrapper>
-              <Label htmlFor="language" />
-              <DropDown className="Select" id="language">
-                <option>English</option>
-                <option>Russian</option>
-              </DropDown>
-            </DropDownWrapper>
-            <DropDownWrapper>
-              <Label htmlFor="currency" />
-              <DropDown className="Select" id="currency">
-                <option>United States dollar</option>
-                <option>Rubles</option>
-              </DropDown>
-            </DropDownWrapper>
+            <DropDownCol>
+              <DropDownWrapper>
+                <Label htmlFor="language" />
+                <DropDown id="language">
+                  <option>English</option>
+                  <option>Russian</option>
+                </DropDown>
+              </DropDownWrapper>
+            </DropDownCol>
+            <DropDownCol>
+              <DropDownWrapper>
+                <Label htmlFor="currency" />
+                <DropDown id="currency">
+                  <option>United States dollar</option>
+                  <option>Rubles</option>
+                </DropDown>
+              </DropDownWrapper>
+            </DropDownCol>
           </Col3>
           <Col2Offset1>
             <Title>Airbnb</Title>
