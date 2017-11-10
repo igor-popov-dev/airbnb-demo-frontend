@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import pictureExample from "./pictureExample.png";
-import { Row, Title, Col4 } from "../CommonStyles.js";
+import { Row, Title } from "../CommonStyles.js";
 import { Slider, SliderContainer } from "../Slider/";
+import { Col } from "react-flexbox-grid";
 
 const PartLink = styled.a`
   display: block;
@@ -44,24 +45,24 @@ export default function() {
         <SliderContainer>
           <Slider>
             <Row>
-              <Col4>
+              <Col xs={6} md={5} lg={4}>
                 <PartLink>
                   <Img src={pictureExample} alt="" />
                   <PartName>Homes</PartName>
                 </PartLink>
-              </Col4>
-              <Col4>
+              </Col>
+              <Col xs={6} md={5} lg={4}>
                 <PartLink>
                   <Img src={pictureExample} alt="" />
                   <PartName>Experiences</PartName>
                 </PartLink>
-              </Col4>
-              <Col4>
+              </Col>
+              <Col xs={6} md={5} lg={4}>
                 <PartLink>
                   <Img src={pictureExample} alt="" />
                   <PartName>Restaurants</PartName>
                 </PartLink>
-              </Col4>
+              </Col>
             </Row>
           </Slider>
         </SliderContainer>

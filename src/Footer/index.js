@@ -32,20 +32,6 @@ const DropDown = styled.select`
     font-size: 18px;
   }
 `;
-export const Col3 = styled.div`
-  flex-basis: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  padding: 16px 0 24px;
-  @media (min-width: 768px) {
-    height: auto;
-    display: block;
-    flex-basis: 25%;
-    max-width: 25%;
-    padding: 0 8px;
-  }
-`;
 const DropDownWrapper = styled.div`
   height: 48px;
   border-radius: 4px;
@@ -83,7 +69,7 @@ const Link = styled.a`
   margin-bottom: 8px;
   display: block;
 `;
-const Col2Offset1 = styled.div`
+const NavContainer = styled.div`
   display: none;
   margin-left: 8.33333333%;
   flex-basis: 16.66666667%;
@@ -93,6 +79,20 @@ const Col2Offset1 = styled.div`
   box-sizing: border-box;
   @media (min-width: 768px) {
     display: block;
+  }
+`;
+const FormContainer = styled.div`
+  flex-basis: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 16px 0 24px;
+  @media (min-width: 768px) {
+    height: auto;
+    display: block;
+    flex-basis: 25%;
+    max-width: 25%;
+    padding: 0 8px;
   }
 `;
 const DropDownCol = styled.div`
@@ -114,7 +114,7 @@ export default function() {
     <Footer>
       <div className="container">
         <Row>
-          <Col3>
+          <FormContainer>
             <DropDownCol>
               <DropDownWrapper>
                 <Label htmlFor="language" />
@@ -133,8 +133,8 @@ export default function() {
                 </DropDown>
               </DropDownWrapper>
             </DropDownCol>
-          </Col3>
-          <Col2Offset1>
+          </FormContainer>
+          <NavContainer>
             <Title>Airbnb</Title>
             <NavList>
               <Link href="">About us</Link>
@@ -144,8 +144,8 @@ export default function() {
               <Link href="">Help</Link>
               <Link href="">Diversity & Belongin</Link>
             </NavList>
-          </Col2Offset1>
-          <Col2Offset1>
+          </NavContainer>
+          <NavContainer>
             <Title>Discover</Title>
             <NavList>
               <Link href="">Trust & Safety</Link>
@@ -156,8 +156,8 @@ export default function() {
               <Link href="">Guidebooks</Link>
               <Link href="">Airbnbmag</Link>
             </NavList>
-          </Col2Offset1>
-          <Col2Offset1>
+          </NavContainer>
+          <NavContainer>
             <Title>Hosting</Title>
             <NavList>
               <Link href="">Why Host</Link>
@@ -165,7 +165,7 @@ export default function() {
               <Link href="">Responsible Hosting</Link>
               <Link href="">Community Center</Link>
             </NavList>
-          </Col2Offset1>
+          </NavContainer>
         </Row>
       </div>
       <Bottom />

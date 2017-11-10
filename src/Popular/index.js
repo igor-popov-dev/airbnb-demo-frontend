@@ -1,22 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Row } from "../CommonStyles.js";
-import { Col3 } from "../Experiences/";
-import {
-  SliderControllerRight,
-  SliderControllerLeft,
-  Slider,
-  SliderContainer
-} from "../Slider/";
+import { Row, Image } from "../CommonStyles.js";
+import { Grid, Col } from "react-flexbox-grid";
+import { Right, Left, Slider, SliderContainer } from "../Slider/";
 import SectionTitle from "../SectionTitle/";
 import imageExample from "./imageExample.png";
 
-const Image = styled.div`
-  height: 164px;
-  background: url(${imageExample}) 50% 50% no-repeat;
-  background-size: cover;
-`;
-const CardItem = styled.a`
+const Card = styled.a`
   color: #383838;
   text-decoration: none;
   cursor: pointer;
@@ -39,58 +29,55 @@ const Check = styled.p`
   opacity: 0.9;
   margin: 0;
 `;
-const ArrowRight = SliderControllerRight.extend`top: 82px;`;
-const ArrowLeft = SliderControllerLeft.extend`top: 82px;`;
+const ArrowRight = Right.extend`top: 105px;`;
+const ArrowLeft = Left.extend`top: 105px;`;
 
 export default function() {
   return (
     <section>
-      <div className="container">
-        <SectionTitle
-          name="Popular reservations around the world"
-          moreLink="ya.ru"
-        />
+      <Grid>
+        <SectionTitle name="Popular reservations around the world" href="" />
         <SliderContainer>
           <ArrowRight />
           <ArrowLeft />
           <Slider>
             <Row>
-              <Col3>
-                <CardItem>
-                  <Image />
+              <Col xs={6} md={4} lg={3}>
+                <Card>
+                  <Image src={imageExample} />
                   <Theme>Speakeasy</Theme>
                   <Name>Chumley’s</Name>
                   <Check>About $60 per person</Check>
-                </CardItem>
-              </Col3>
-              <Col3>
-                <CardItem>
-                  <Image />
+                </Card>
+              </Col>
+              <Col xs={6} md={4} lg={3}>
+                <Card>
+                  <Image src={imageExample} />
                   <Theme>Korean gastropub</Theme>
                   <Name>Hanjan</Name>
                   <Check>About $50 per person</Check>
-                </CardItem>
-              </Col3>
-              <Col3>
-                <CardItem>
-                  <Image />
+                </Card>
+              </Col>
+              <Col xs={6} md={4} lg={3}>
+                <Card>
+                  <Image src={imageExample} />
                   <Theme>German american</Theme>
                   <Name>Prime Meats</Name>
                   <Check>About $55 per person</Check>
-                </CardItem>
-              </Col3>
-              <Col3>
-                <CardItem>
-                  <Image />
+                </Card>
+              </Col>
+              <Col xs={6} md={4} lg={3}>
+                <Card>
+                  <Image src={imageExample} />
                   <Theme>Fine seafood</Theme>
                   <Name>Seaprice</Name>
                   <Check>About $70 per person</Check>
-                </CardItem>
-              </Col3>
+                </Card>
+              </Col>
             </Row>
           </Slider>
         </SliderContainer>
-      </div>
+      </Grid>
     </section>
   );
 }

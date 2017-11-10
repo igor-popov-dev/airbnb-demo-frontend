@@ -1,56 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Card, Place, Price, ReviewsNum } from "../CommonStyles.js";
-import {
-  Slider,
-  SliderContainer,
-  SliderControllerRight,
-  SliderControllerLeft
-} from "../Slider/";
+import { Card, Row, Place, Price, ReviewsNum, Image } from "../CommonStyles.js";
+import { Slider, SliderContainer, Right, Left } from "../Slider/";
 import SectionTitle from "../SectionTitle/";
 import imageExample from "./imageExample.png";
 import Stars from "../Stars/";
-
-export const Col3 = styled.div`
-  flex-basis: 50%;
-  max-width: 50%;
-  min-width: 50%;
-  padding-right: 8px;
-  padding-left: 8px;
-  box-sizing: border-box;
-  @media (min-width: 768px) {
-    flex-basis: 33.3333%;
-    max-width: 33.3333%;
-    min-width: 33.3333%;
-  }
-  @media (min-width: 1200px) {
-    flex-basis: 25%;
-    max-width: 25%;
-    min-width: 25%;
-  }
-`;
-const Image = styled.div`
-  height: 216px;
-  background: url(${imageExample}) 50% 50% no-repeat;
-  background-size: cover;
-  @media (min-width: 1200px) {
-    height: 346px;
-  }
-`;
+import { Grid, Col } from "react-flexbox-grid";
 
 export default function() {
   return (
     <section>
-      <div className="container">
-        <SectionTitle name="Experiences" moreLink="ya.ru" />
+      <Grid>
+        <SectionTitle name="Experiences" href="" />
         <SliderContainer>
-          <SliderControllerRight />
-          <SliderControllerLeft />
+          <Right />
+          <Left />
           <Slider>
             <Row>
-              <Col3>
+              <Col xs={6} md={4} lg={3}>
                 <Card href="">
-                  <Image />
+                  <Image src={imageExample} />
                   <Place>
                     <Price>$29</Price>
                     Forest therapy
@@ -60,10 +29,10 @@ export default function() {
                     44 reviews
                   </ReviewsNum>
                 </Card>
-              </Col3>
-              <Col3>
+              </Col>
+              <Col xs={6} md={4} lg={3}>
                 <Card href="">
-                  <Image />
+                  <Image src={imageExample} />
                   <Place>
                     <Price>$69</Price>
                     Whale watching
@@ -73,10 +42,10 @@ export default function() {
                     46 reviews
                   </ReviewsNum>
                 </Card>
-              </Col3>
-              <Col3>
+              </Col>
+              <Col xs={6} md={4} lg={3}>
                 <Card href="">
-                  <Image />
+                  <Image src={imageExample} />
                   <Place>
                     <Price>$69</Price>
                     Table Mountain Summit,<br /> Cable Car Down
@@ -86,10 +55,10 @@ export default function() {
                     44 reviews
                   </ReviewsNum>
                 </Card>
-              </Col3>
-              <Col3>
+              </Col>
+              <Col xs={6} md={4} lg={3}>
                 <Card href="">
-                  <Image />
+                  <Image src={imageExample} />
                   <Place>
                     <Price>$50</Price>
                     Salsa Night
@@ -99,11 +68,11 @@ export default function() {
                     64 reviews
                   </ReviewsNum>
                 </Card>
-              </Col3>
+              </Col>
             </Row>
           </Slider>
         </SliderContainer>
-      </div>
+      </Grid>
     </section>
   );
 }

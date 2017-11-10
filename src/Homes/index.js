@@ -1,21 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Col4, Card, Place, Price, ReviewsNum } from "../CommonStyles.js";
+import { Row, Card, Place, Price, ReviewsNum, Image } from "../CommonStyles.js";
 import Stars from "../Stars/";
-import {
-  Slider,
-  SliderContainer,
-  SliderControllerRight,
-  SliderControllerLeft
-} from "../Slider/";
+import { Slider, SliderContainer, Right, Left } from "../Slider/";
 import SectionTitle from "../SectionTitle/";
 import imageExample from "./imageExample.png";
+import { Grid, Col } from "react-flexbox-grid";
 
-const Image = styled.div`
-  height: 204px;
-  background: url(${imageExample}) 50% 50% no-repeat;
-  background-size: cover;
-`;
 const HomeInfo = Place.extend`
   font-weight: bold;
   margin-bottom: 2px;
@@ -29,33 +20,22 @@ const Notice = styled.p`
   margin-bottom: 8px;
   font-weight: light;
 `;
-const Col = Col4.extend`
-  min-width: 197px;
-  @media (min-width: 768px) {
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%;
-    min-width: 304px;
-  }
-  @media (min-width: 1200px) {
-    min-width: auto;
-  }
-`;
-const ArrowRight = SliderControllerRight.extend`top: 104px;`;
-const ArrowLeft = SliderControllerLeft.extend`top: 104px;`;
+const ArrowRight = Right.extend`top: 130px;`;
+const ArrowLeft = Left.extend`top: 130px;`;
 
 export default function() {
   return (
     <section>
-      <div className="container">
-        <SectionTitle name="Homes" moreLink="ya.ru" />
+      <Grid>
+        <SectionTitle name="Homes" href="" />
         <SliderContainer>
           <ArrowRight />
           <ArrowLeft />
           <Slider>
             <Row>
-              <Col>
+              <Col xs={6} md={5} lg={4}>
                 <Card>
-                  <Image />
+                  <Image src={imageExample} />
                   <HomeInfo>
                     <Price>$82</Price>
                     La Salentina, see, nature & relax
@@ -67,9 +47,9 @@ export default function() {
                   </ReviewsNum>
                 </Card>
               </Col>
-              <Col>
+              <Col xs={6} md={5} lg={4}>
                 <Card>
-                  <Image />
+                  <Image src={imageExample} />
                   <HomeInfo>
                     <Price>$82</Price>
                     Your private 3 bedr.riad and exclusi...
@@ -81,9 +61,9 @@ export default function() {
                   </ReviewsNum>
                 </Card>
               </Col>
-              <Col>
+              <Col xs={6} md={5} lg={4}>
                 <Card>
-                  <Image />
+                  <Image src={imageExample} />
                   <HomeInfo>
                     <Price>$200</Price>
                     Dreamy Tropical Tree House
@@ -98,7 +78,7 @@ export default function() {
             </Row>
           </Slider>
         </SliderContainer>
-      </div>
+      </Grid>
     </section>
   );
 }

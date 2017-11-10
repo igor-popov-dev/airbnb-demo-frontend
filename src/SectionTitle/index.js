@@ -50,7 +50,7 @@ export default function(props) {
     <Container>
       <Title>{props.name}</Title>
       <MoreContainer>
-        <MoreLink href={props.moreLink}>See all</MoreLink>
+        <MoreLink href={props.href}>See all</MoreLink>
       </MoreContainer>
     </Container>
   );

@@ -20,22 +20,6 @@ export const Row = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
 `;
-export const Col4 = styled.div`
-  flex-basis: 50%;
-  max-width: 50%;
-  min-width: 50%;
-  padding-right: 8px;
-  padding-left: 8px;
-  box-sizing: border-box;
-  @media (min-width: 768px) {
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%;
-    min-width: 304px;
-  }
-  @media (min-width: 1200px) {
-    min-width: auto;
-  }
-`;
 export const Card = styled.a`
   text-decoration: none;
   cursor: pointer;
@@ -60,3 +44,4 @@ export const ReviewsNum = styled.p`
   margin: 0;
   color: #383838;
 `;
+export const Image = styled.img`width: 100%;`;
