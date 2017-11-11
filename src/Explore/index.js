@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import pictureExample from "./pictureExample.png";
-import { Row, Title } from "../CommonStyles.js";
+import { Row, Title } from "../CommonStyles";
 import { Slider, SliderContainer } from "../Slider/";
 import { Col } from "react-flexbox-grid";
 

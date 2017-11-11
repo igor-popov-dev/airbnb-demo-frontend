@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Title, Image } from "../CommonStyles.js";
+import { Row, Title, Image } from "../CommonStyles";
 import { Grid, Col } from "react-flexbox-grid";
 import { Slider, SliderContainer, Right, Left } from "../Slider/";
 import destinationExample from "./destinationImage.png";

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Card, Place, Price, ReviewsNum, Image } from "../CommonStyles.js";
+import { Row, Card, Place, Price, ReviewsNum, Image } from "../CommonStyles";
 import Stars from "../Stars/";
 import { Slider, SliderContainer, Right, Left } from "../Slider/";
 import SectionTitle from "../SectionTitle/";

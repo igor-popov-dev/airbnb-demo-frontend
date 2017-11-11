@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row } from "../CommonStyles.js";
+import { Row } from "../CommonStyles";
 import footerLogo from "./footerLogo.svg";
 import facebook from "./facebook.svg";
 import twitter from "./twitter.svg";

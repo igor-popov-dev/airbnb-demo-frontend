@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row } from "../CommonStyles.js";
+import { Row } from "../CommonStyles";
 import DropDownImage from "./dropDown.svg";
 import Bottom from "./Bottom.js";
 
@@ -69,7 +69,7 @@ const Link = styled.a`
   margin-bottom: 8px;
   display: block;
 `;
-const NavContainer = styled.div`
+const Nav = styled.div`
   display: none;
   margin-left: 8.33333333%;
   flex-basis: 16.66666667%;
@@ -81,7 +81,7 @@ const NavContainer = styled.div`
     display: block;
   }
 `;
-const FormContainer = styled.div`
+const Form = styled.div`
   flex-basis: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -114,7 +114,7 @@ export default function() {
     <Footer>
       <div className="container">
         <Row>
-          <FormContainer>
+          <Form>
             <DropDownCol>
               <DropDownWrapper>
                 <Label htmlFor="language" />
@@ -133,8 +133,8 @@ export default function() {
                 </DropDown>
               </DropDownWrapper>
             </DropDownCol>
-          </FormContainer>
-          <NavContainer>
+          </Form>
+          <Nav>
             <Title>Airbnb</Title>
             <NavList>
               <Link href="">About us</Link>
@@ -144,8 +144,8 @@ export default function() {
               <Link href="">Help</Link>
               <Link href="">Diversity & Belongin</Link>
             </NavList>
-          </NavContainer>
-          <NavContainer>
+          </Nav>
+          <Nav>
             <Title>Discover</Title>
             <NavList>
               <Link href="">Trust & Safety</Link>
@@ -156,8 +156,8 @@ export default function() {
               <Link href="">Guidebooks</Link>
               <Link href="">Airbnbmag</Link>
             </NavList>
-          </NavContainer>
-          <NavContainer>
+          </Nav>
+          <Nav>
             <Title>Hosting</Title>
             <NavList>
               <Link href="">Why Host</Link>
@@ -165,7 +165,7 @@ export default function() {
               <Link href="">Responsible Hosting</Link>
               <Link href="">Community Center</Link>
             </NavList>
-          </NavContainer>
+          </Nav>
         </Row>
       </div>
       <Bottom />
