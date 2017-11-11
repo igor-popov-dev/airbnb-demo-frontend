@@ -10,17 +10,6 @@ const Card = styled.a`
   color: #383838;
   cursor: pointer;
 `;
-const ImgContainer = styled.div`
-  height: 138px;
-  background: url(${destinationExample}) 50% 0 no-repeat;
-  background-size: cover;
-  @media (min-width: 768px) {
-    height: 264px;
-  }
-  @media (min-width: 1200px) {
-    height: 220px;
-  }
-`;
 const City = styled.h3`
   font-size: 15px;
   line-height: 18px;

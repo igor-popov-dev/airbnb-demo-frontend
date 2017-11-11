@@ -7,7 +7,6 @@ import Homes from "./Homes/";
 import Popular from "./Popular/";
 import Destinations from "./Destinations/";
 import Footer from "./Footer/";
-import styled from "styled-components";
 
 class App extends Component {
   render() {
