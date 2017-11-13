@@ -57,10 +57,6 @@ const Title = styled.h4`
   margin: 0 0 16px;
   font-weight: bold;
 `;
-const NavList = styled.ul`
-  padding-left: 0;
-  list-style: none;
-`;
 const Link = styled.a`
   text-decoration: none;
   color: #636363;
@@ -69,7 +65,7 @@ const Link = styled.a`
   margin-bottom: 8px;
   display: block;
 `;
-const Nav = styled.div`
+const Nav = styled.nav`
   display: none;
   margin-left: 8.33333333%;
   flex-basis: 16.66666667%;
@@ -81,7 +77,7 @@ const Nav = styled.div`
     display: block;
   }
 `;
-const Form = styled.div`
+const Form = styled.form`
   flex-basis: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -136,35 +132,29 @@ export default function() {
           </Form>
           <Nav>
             <Title>Airbnb</Title>
-            <NavList>
-              <Link href="">About us</Link>
-              <Link href="">Careers</Link>
-              <Link href="">Press</Link>
-              <Link href="">Policies</Link>
-              <Link href="">Help</Link>
-              <Link href="">Diversity & Belongin</Link>
-            </NavList>
+            <Link href="">About us</Link>
+            <Link href="">Careers</Link>
+            <Link href="">Press</Link>
+            <Link href="">Policies</Link>
+            <Link href="">Help</Link>
+            <Link href="">Diversity & Belongin</Link>
           </Nav>
           <Nav>
             <Title>Discover</Title>
-            <NavList>
-              <Link href="">Trust & Safety</Link>
-              <Link href="">Travel Credit</Link>
-              <Link href="">Gift Cards</Link>
-              <Link href="">Airbnb Citizen</Link>
-              <Link href="">Business Travel</Link>
-              <Link href="">Guidebooks</Link>
-              <Link href="">Airbnbmag</Link>
-            </NavList>
+            <Link href="">Trust & Safety</Link>
+            <Link href="">Travel Credit</Link>
+            <Link href="">Gift Cards</Link>
+            <Link href="">Airbnb Citizen</Link>
+            <Link href="">Business Travel</Link>
+            <Link href="">Guidebooks</Link>
+            <Link href="">Airbnbmag</Link>
           </Nav>
           <Nav>
             <Title>Hosting</Title>
-            <NavList>
-              <Link href="">Why Host</Link>
-              <Link href="">Hospitality</Link>
-              <Link href="">Responsible Hosting</Link>
-              <Link href="">Community Center</Link>
-            </NavList>
+            <Link href="">Why Host</Link>
+            <Link href="">Hospitality</Link>
+            <Link href="">Responsible Hosting</Link>
+            <Link href="">Community Center</Link>
           </Nav>
         </Row>
       </div>

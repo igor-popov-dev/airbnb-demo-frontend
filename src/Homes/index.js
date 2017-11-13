@@ -1,25 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import { Row, Card, Place, Price, ReviewsNum, Image } from "../CommonStyles";
-import Stars from "../Stars/";
+import { Row } from "../CommonStyles";
 import { Slider, SliderContainer, Right, Left } from "../Slider/";
 import SectionTitle from "../SectionTitle/";
 import imageExample from "./imageExample.png";
 import { Grid, Col } from "react-flexbox-grid";
+import Card from "./Card";
 
-const HomeInfo = Place.extend`
-  font-weight: bold;
-  margin-bottom: 2px;
-`;
-const Notice = styled.p`
-  margin: 0;
-  font-size: 15px;
-  line-height: 18px;
-  color: #383838;
-  margin-top: 2px;
-  margin-bottom: 8px;
-  font-weight: light;
-`;
 const ArrowRight = Right.extend`top: 130px;`;
 const ArrowLeft = Left.extend`top: 130px;`;
 
@@ -34,45 +20,33 @@ export default function() {
           <Slider>
             <Row>
               <Col xs={6} md={5} lg={4}>
-                <Card>
-                  <Image src={imageExample} />
-                  <HomeInfo>
-                    <Price>$82</Price>
-                    La Salentina, see, nature & relax
-                  </HomeInfo>
-                  <Notice>Entrie house · 9 beds</Notice>
-                  <ReviewsNum>
-                    <Stars />
-                    97 · Superhost
-                  </ReviewsNum>
+                <Card
+                  imgSrc={imageExample}
+                  price="82"
+                  beds="9 beds"
+                  superhost="97"
+                >
+                  La Salentina, see, nature & relax
                 </Card>
               </Col>
               <Col xs={6} md={5} lg={4}>
-                <Card>
-                  <Image src={imageExample} />
-                  <HomeInfo>
-                    <Price>$82</Price>
-                    Your private 3 bedr.riad and exclusi...
-                  </HomeInfo>
-                  <Notice>Entrie house · 4 beds</Notice>
-                  <ReviewsNum>
-                    <Stars />
-                    161 · Superhost
-                  </ReviewsNum>
+                <Card
+                  imgSrc={imageExample}
+                  price="82"
+                  beds="4 beds"
+                  superhost="161"
+                >
+                  Your private 3 bedr.riad and exclusi...
                 </Card>
               </Col>
               <Col xs={6} md={5} lg={4}>
-                <Card>
-                  <Image src={imageExample} />
-                  <HomeInfo>
-                    <Price>$200</Price>
-                    Dreamy Tropical Tree House
-                  </HomeInfo>
-                  <Notice>Entrie house · 1 beds</Notice>
-                  <ReviewsNum>
-                    <Stars />
-                    364 · Superhost
-                  </ReviewsNum>
+                <Card
+                  imgSrc={imageExample}
+                  price="200"
+                  beds="1 bed"
+                  superhost="364"
+                >
+                  Dreamy Tropical Tree House
                 </Card>
               </Col>
             </Row>
