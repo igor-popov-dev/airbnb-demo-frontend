@@ -5,6 +5,7 @@ import imageExample from "./imageExample.png";
 import { Grid, Col, Row } from "react-flexbox-grid";
 import Card from "./Card";
 import Header from "../Header/";
+import { MapButton } from "../UI/MapButton";
 
 import Filters from "../UI/Filters";
 import Paginator from "../UI/Paginator";
@@ -39,9 +40,9 @@ export default function() {
       <Content>
         <Grid>
           <Row>
-            <Col lg={8} sm={12}>
+            <Col lg={8} sm={12} xs={12}>
               <Row>
-                <Col sm={6}>
+                <Col sm={6} xs={12}>
                   <HomeCard
                     imgSrc={imageExample}
                     price="82"
@@ -51,7 +52,7 @@ export default function() {
                     La Salentina, see, nature & relax
                   </HomeCard>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} xs={12}>
                   <HomeCard
                     imgSrc={imageExample}
                     price="82"
@@ -61,7 +62,7 @@ export default function() {
                     La Salentina, see, nature & relax
                   </HomeCard>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} xs={12}>
                   <HomeCard
                     imgSrc={imageExample}
                     price="82"
@@ -71,7 +72,7 @@ export default function() {
                     La Salentina, see, nature & relax
                   </HomeCard>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} xs={12}>
                   <HomeCard
                     imgSrc={imageExample}
                     price="82"
@@ -81,7 +82,7 @@ export default function() {
                     La Salentina, see, nature & relax
                   </HomeCard>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} xs={12}>
                   <HomeCard
                     imgSrc={imageExample}
                     price="82"
@@ -91,7 +92,7 @@ export default function() {
                     La Salentina, see, nature & relax
                   </HomeCard>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} xs={12}>
                   <HomeCard
                     imgSrc={imageExample}
                     price="82"
@@ -101,7 +102,7 @@ export default function() {
                     La Salentina, see, nature & relax
                   </HomeCard>
                 </Col>
-                <Col sm={12}>
+                <Col sm={12} xs={12}>
                   <Paginator />
                 </Col>
               </Row>
@@ -112,6 +113,7 @@ export default function() {
                 defaultCenter={{ lat: -34.397, lng: 150.644 }}
               />
             </Map>
+            <MapButton />
           </Row>
         </Grid>
       </Content>

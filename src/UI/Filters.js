@@ -21,8 +21,17 @@ const Filter = styled.button`
   background: #fff;
   margin: 0 6px;
   cursor: pointer;
+  font-family: Circular;
+  font-weight: normal;
   &:focus {
     outline: 0;
+  }
+`;
+
+const HiddenFilter = Filter.extend`
+  display: none;
+  @media (min-width: 992px) {
+    display: inline-block;
   }
 `;
 
@@ -34,9 +43,9 @@ export default function() {
           <Col lg={12}>
             <Filter>Dates</Filter>
             <Filter>Guests</Filter>
-            <Filter>Room type</Filter>
-            <Filter>Price</Filter>
-            <Filter>Instant book</Filter>
+            <HiddenFilter>Room type</HiddenFilter>
+            <HiddenFilter>Price</HiddenFilter>
+            <HiddenFilter>Instant book</HiddenFilter>
             <Filter>More filters</Filter>
           </Col>
         </Row>

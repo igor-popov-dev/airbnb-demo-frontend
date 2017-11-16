@@ -30,6 +30,7 @@ const Input = styled.input`
   font-size: 16px;
   line-height: 46px;
   font-weight: light;
+  font-family: Circular;
   &:focus {
     outline: 0;
   }

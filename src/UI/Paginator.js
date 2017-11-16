@@ -16,6 +16,8 @@ const Next = styled.a`
   margin: 0px 10px;
   box-sizing: border-box;
   vertical-align: top;
+  cursor: pointer;
+  ${props => props.hidden && css`display: none;`};
 `;
 const Prev = Next.extend`transform: rotate(180deg);`;
 const NumPag = styled.a`
@@ -59,18 +61,21 @@ const Views = styled.div`
   text-align: center;
 `;
 const Info = styled.div`
-  margin: 40px 0 25px;
+  margin: 40px 0 88px;
   font-size: 16px;
   line-height: 19px;
   color: #636363;
   text-align: center;
+  @media (min-width: 576px) {
+    margin: 40px 0 25px;
+  }
 `;
 
 export default function() {
   return (
     <div>
       <Nav>
-        <Prev href="" />
+        <Prev hidden href="" />
         <NumPag active href="">
           1
         </NumPag>
