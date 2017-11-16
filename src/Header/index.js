@@ -4,7 +4,11 @@ import logo from "./airnbnLogo.svg";
 import search from "./search.svg";
 import arrowDown from "./arrowDown.svg";
 
-const Header = styled.header`border-bottom: 1px solid rgba(72, 72, 72, 0.3);`;
+const Header = styled.header`
+  border-bottom: 1px solid rgba(72, 72, 72, 0.3);
+  background: #fff;
+  z-index: 100;
+`;
 const Form = styled.form`
   position: relative;
   display: inline-block;
@@ -26,6 +30,7 @@ const Input = styled.input`
   font-size: 16px;
   line-height: 46px;
   font-weight: light;
+  font-family: Circular;
   &:focus {
     outline: 0;
   }
@@ -108,9 +113,9 @@ const Link = styled.a`
   margin-left: 8px;
 `;
 
-export default function() {
+export default function(props) {
   return (
-    <Header>
+    <Header className={props.className}>
       <div className="container">
         <Row>
           <LeftBlock>

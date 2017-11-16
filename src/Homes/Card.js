@@ -18,7 +18,7 @@ const Notice = styled.p`
 
 export default function(props) {
   return (
-    <Card>
+    <Card className={props.className}>
       <Image src={props.imgSrc} />
       <HomeInfo>
         <Price>${props.price}</Price>

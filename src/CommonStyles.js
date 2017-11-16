@@ -22,9 +22,11 @@ export const Row = styled.div`
 `;
 export const Card = styled.a`
   text-decoration: none;
+  display: inline-block;
   cursor: pointer;
   color: #383838;
 `;
+
 export const Place = styled.h3`
   font-size: 15px;
   line-height: 18px;
